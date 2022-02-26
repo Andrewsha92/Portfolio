@@ -1,0 +1,469 @@
+{
+	"info": {
+		"_postman_id": "506828a8-c220-4327-ae68-1e3bfa88b1df",
+		"name": "API GET запросы Дом питомца",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "/species",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://{{serverIP}}/api/species/",
+					"protocol": "http",
+					"host": [
+						"{{serverIP}}"
+					],
+					"path": [
+						"api",
+						"species",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/breed",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://{{serverIP}}/api/breed/",
+					"protocol": "http",
+					"host": [
+						"{{serverIP}}"
+					],
+					"path": [
+						"api",
+						"breed",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/?page=1&page_size=6",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://{{serverIP}}/api/pet/?page=1&page_size=6",
+					"protocol": "http",
+					"host": [
+						"{{serverIP}}"
+					],
+					"path": [
+						"api",
+						"pet",
+						""
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "page_size",
+							"value": "6"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/gender",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://130.193.37.179/api/gender/",
+					"protocol": "http",
+					"host": [
+						"130",
+						"193",
+						"37",
+						"179"
+					],
+					"path": [
+						"api",
+						"gender",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/Феликс-petID",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://130.193.37.179/app/pets/1708750b-f0ce-47ac-b5fa-b24310d167fd",
+					"protocol": "http",
+					"host": [
+						"130",
+						"193",
+						"37",
+						"179"
+					],
+					"path": [
+						"app",
+						"pets",
+						"1708750b-f0ce-47ac-b5fa-b24310d167fd"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/Барон-petID",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://130.193.37.179/api/pet/517d137a-d05e-48bc-b1c0-cfeb09e06f23/",
+					"protocol": "http",
+					"host": [
+						"130",
+						"193",
+						"37",
+						"179"
+					],
+					"path": [
+						"api",
+						"pet",
+						"517d137a-d05e-48bc-b1c0-cfeb09e06f23",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/Гоша-petID",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://130.193.37.179/app/pets/70a41546-3381-4d13-be73-3096ef0cbe0b",
+					"protocol": "http",
+					"host": [
+						"130",
+						"193",
+						"37",
+						"179"
+					],
+					"path": [
+						"app",
+						"pets",
+						"70a41546-3381-4d13-be73-3096ef0cbe0b"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/Мухтар-petID",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://130.193.37.179/app/pets/a9297832-56e5-4949-9ac6-88b7973e1807",
+					"protocol": "http",
+					"host": [
+						"130",
+						"193",
+						"37",
+						"179"
+					],
+					"path": [
+						"app",
+						"pets",
+						"a9297832-56e5-4949-9ac6-88b7973e1807"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/Сэм-petID",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://130.193.37.179/app/pets/b094a60f-9471-4019-aafe-381128db9814",
+					"protocol": "http",
+					"host": [
+						"130",
+						"193",
+						"37",
+						"179"
+					],
+					"path": [
+						"app",
+						"pets",
+						"b094a60f-9471-4019-aafe-381128db9814"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "карточка \"ПРИЮТИТЬ ПИТОМЦА\"",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 201\", function () {\r",
+							"    pm.response.to.have.status(201);\r",
+							"    var jsonData = JSON.parse(responseBody);\r",
+							"    pm.variables.set(\"petid\", jsonData.id);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "phone_num",
+							"value": "+79000000003",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "13123@mail.ru",
+							"type": "text"
+						},
+						{
+							"key": "firstname",
+							"value": "михаил",
+							"type": "text"
+						},
+						{
+							"key": "middlename",
+							"value": "александрович",
+							"type": "text"
+						},
+						{
+							"key": "lastname",
+							"value": "ломоновсов",
+							"type": "text"
+						},
+						{
+							"key": "comment",
+							"value": "123",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://130.193.37.179/api/pet_shelter_req/",
+					"protocol": "http",
+					"host": [
+						"130",
+						"193",
+						"37",
+						"179"
+					],
+					"path": [
+						"api",
+						"pet_shelter_req",
+						""
+					],
+					"query": [
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						},
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						},
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						},
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						},
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						},
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					"pm.test(\"Status code is 200\", function () {",
+					"    pm.response.to.have.status(200);",
+					"});"
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "serverIP",
+			"value": "130.193.37.179/",
+			"type": "string"
+		}
+	]
+}

@@ -1,0 +1,151 @@
+{
+	"info": {
+		"_postman_id": "518abba5-de0b-4be9-a8e1-9e257f0af96f",
+		"name": "API ПРИЮТИТЬ ПИТОМЦА",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Приютить питомца",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "phone_num",
+							"value": "+79123456789",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "{{email}}",
+							"type": "text"
+						},
+						{
+							"key": "firstname",
+							"value": "{{firstname}}",
+							"type": "text"
+						},
+						{
+							"key": "middlename",
+							"value": "{{middlename}}",
+							"type": "text"
+						},
+						{
+							"key": "lastname",
+							"value": "{{lastname}}",
+							"type": "text"
+						},
+						{
+							"key": "comment",
+							"value": "{{comment}}",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://130.193.37.179/api/pet_shelter_req/",
+					"protocol": "http",
+					"host": [
+						"130",
+						"193",
+						"37",
+						"179"
+					],
+					"path": [
+						"api",
+						"pet_shelter_req",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					"pm.test(\"Status code is 201\", function () {",
+					"    pm.response.to.have.status(201);",
+					"});",
+					"pm.test(\"Status code is 201\", function () {",
+					"  pm.response.to.have.status(201);",
+					"});",
+					"pm.test(\"Status code is 201\", function () {",
+					"    pm.response.to.have.status(201);",
+					"    var jsonData = JSON.parse(responseBody);",
+					"    pm.variables.get(\"email\", jsonData.email);",
+					"});",
+					"pm.test(\"Status code is 201\", function () {",
+					"    pm.response.to.have.status(201);",
+					"    var jsonData = JSON.parse(responseBody);",
+					"    pm.variables.get(\"firstname\", jsonData.firstname);",
+					"    ",
+					"});",
+					"pm.test(\"Status code is 201\", function () {",
+					"    pm.response.to.have.status(201);",
+					"    var jsonData = JSON.parse(responseBody);",
+					"    pm.variables.get(\"middlename\", jsonData.middlename);",
+					"});",
+					"pm.test(\"Status code is 201\", function () {",
+					"    pm.response.to.have.status(201);",
+					"    var jsonData = JSON.parse(responseBody);",
+					"    pm.variables.get(\"lastname\", jsonData.lastname);",
+					"});",
+					"pm.test(\"Status code is 201\", function () {",
+					"    pm.response.to.have.status(201);",
+					"    var jsonData = JSON.parse(responseBody);",
+					"    pm.variables.get(\"comment\", jsonData.comment);",
+					"});",
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "phone_num",
+			"value": "+79123456789",
+			"type": "string"
+		},
+		{
+			"key": "email",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"key": "firstname",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"key": "middlename",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"key": "lastname",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"key": "comment",
+			"value": "",
+			"type": "string"
+		}
+	]
+}
