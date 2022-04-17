@@ -1,2 +1,2 @@
 # Portfolio
-Hard skills
+Make me better
