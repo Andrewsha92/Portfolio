@@ -1,0 +1,668 @@
+{
+	"info": {
+		"_postman_id": "653a43a0-b998-44a1-8ce4-0734ef08a24a",
+		"name": "HW_postman_by_Vadim_Ksendzov",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "19359539"
+	},
+	"item": [
+		{
+			"name": "get_method",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Body is correct\", function () {\r",
+							"    pm.response.to.have.jsonBody([\r",
+							"    \"Andrew\",\r",
+							"    \"29\"\r",
+							"]);\r",
+							"});\r",
+							"\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "",
+						"value": "",
+						"type": "text"
+					},
+					{
+						"key": "",
+						"value": "",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{host}}get_method?name={{name}}&age={{age}}",
+					"host": [
+						"{{host}}get_method"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "{{name}}"
+						},
+						{
+							"key": "age",
+							"value": "{{age}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "user_info_3",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var jsonData = pm.response.json();\r",
+							"\r",
+							"var Salary = jsonData.salary\r",
+							"\r",
+							"pm.environment.set(\"salary\", Salary);\r",
+							"\r",
+							"\r",
+							"pm.test(\"Body is correct\", function () {\r",
+							"    pm.response.to.have.jsonBody({\r",
+							"    \"age\": \"29\",\r",
+							"    \"family\": {\r",
+							"        \"children\": [\r",
+							"            [\r",
+							"                \"Alex\",\r",
+							"                24\r",
+							"            ],\r",
+							"            [\r",
+							"                \"Kate\",\r",
+							"                12\r",
+							"            ]\r",
+							"        ],\r",
+							"        \"u_salary_1_5_year\": 3600\r",
+							"    },\r",
+							"    \"name\": \"Andrew\",\r",
+							"    \"salary\": 900\r",
+							"});\r",
+							"});\r",
+							"\r",
+							"\r",
+							"\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "",
+						"value": "",
+						"type": "text"
+					},
+					{
+						"key": "",
+						"value": "",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "{{name}}",
+							"type": "text"
+						},
+						{
+							"key": "age",
+							"value": "{{age}}",
+							"type": "text"
+						},
+						{
+							"key": "salary",
+							"value": "900",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{host}}user_info_3",
+					"host": [
+						"{{host}}user_info_3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "object_info_1",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Body is correct\", function () {\r",
+							"    pm.response.to.have.jsonBody({\r",
+							"    \"age\": 29,\r",
+							"    \"daily_food\": 1.08,\r",
+							"    \"daily_sleep\": 225.0,\r",
+							"    \"name\": \"Andrew\"\r",
+							"});\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "",
+						"value": "",
+						"type": "text"
+					},
+					{
+						"key": "",
+						"value": "",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "{{name}}",
+							"type": "text"
+						},
+						{
+							"key": "age",
+							"value": "{{age}}",
+							"type": "text"
+						},
+						{
+							"key": "salary",
+							"value": "999",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{host}}object_info_1?name={{name}}&age={{age}}&weight={{weight}}",
+					"host": [
+						"{{host}}object_info_1"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "{{name}}"
+						},
+						{
+							"key": "age",
+							"value": "{{age}}"
+						},
+						{
+							"key": "weight",
+							"value": "{{weight}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "object_info_2",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Body is correct\", function () {\r",
+							"    pm.response.to.have.jsonBody({\r",
+							"    \"person\": {\r",
+							"        \"u_age\": 21,\r",
+							"        \"u_name\": [\r",
+							"            \"Kris\",\r",
+							"            900,\r",
+							"            21\r",
+							"        ],\r",
+							"        \"u_salary_5_years\": 3780.0\r",
+							"    },\r",
+							"    \"qa_salary_after_1.5_year\": 2970.0,\r",
+							"    \"qa_salary_after_12_months\": 2430.0,\r",
+							"    \"qa_salary_after_3.5_years\": 3420.0,\r",
+							"    \"qa_salary_after_6_months\": 1800,\r",
+							"    \"start_qa_salary\": 900\r",
+							"});\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "",
+						"value": "",
+						"type": "text"
+					},
+					{
+						"key": "",
+						"value": "",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "{{name}}",
+							"type": "text"
+						},
+						{
+							"key": "age",
+							"value": "{{age}}",
+							"type": "text"
+						},
+						{
+							"key": "salary",
+							"value": "{{salary}}",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{host}}object_info_2?name={{name_1}}&age={{age_1}}&salary={{salary}}",
+					"host": [
+						"{{host}}object_info_2"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "{{name_1}}"
+						},
+						{
+							"key": "age",
+							"value": "{{age_1}}"
+						},
+						{
+							"key": "salary",
+							"value": "{{salary}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "object_info_3",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Body is correct\", function () {\r",
+							"    pm.response.to.have.jsonBody({\r",
+							"    \"age\": \"21\",\r",
+							"    \"family\": {\r",
+							"        \"children\": [\r",
+							"            [\r",
+							"                \"Alex\",\r",
+							"                24\r",
+							"            ],\r",
+							"            [\r",
+							"                \"Kate\",\r",
+							"                12\r",
+							"            ]\r",
+							"        ],\r",
+							"        \"pets\": {\r",
+							"            \"cat\": {\r",
+							"                \"age\": 3,\r",
+							"                \"name\": \"Sunny\"\r",
+							"            },\r",
+							"            \"dog\": {\r",
+							"                \"age\": 4,\r",
+							"                \"name\": \"Luky\"\r",
+							"            }\r",
+							"        },\r",
+							"        \"u_salary_1_5_year\": 4000\r",
+							"    },\r",
+							"    \"name\": \"Kris\",\r",
+							"    \"salary\": 1000\r",
+							"});\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "",
+						"value": "",
+						"type": "text"
+					},
+					{
+						"key": "",
+						"value": "",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "{{name}}",
+							"type": "text"
+						},
+						{
+							"key": "age",
+							"value": "{{age}}",
+							"type": "text"
+						},
+						{
+							"key": "salary",
+							"value": "999",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{host}}object_info_3?name={{name_1}}&age={{age_1}}&salary={{salary_1}}",
+					"host": [
+						"{{host}}object_info_3"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "{{name_1}}"
+						},
+						{
+							"key": "age",
+							"value": "{{age_1}}"
+						},
+						{
+							"key": "salary",
+							"value": "{{salary_1}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "object_info_4",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							" var jsonData = pm.response.json();\r",
+							"\r",
+							"var salary_4 = jsonData.person.u_name[1]\r",
+							"\r",
+							"pm.environment.set(\"salary_4\", salary_4);\r",
+							"\r",
+							"pm.test(\"Body is correct\", function () {\r",
+							"    pm.response.to.have.jsonBody({\r",
+							"    \"person\": {\r",
+							"        \"u_age\": 26,\r",
+							"        \"u_name\": [\r",
+							"            \"Mary\",\r",
+							"            1600,\r",
+							"            26\r",
+							"        ],\r",
+							"        \"u_salary_5_years\": 6720.0\r",
+							"    },\r",
+							"    \"qa_salary_after_1.5_year\": 5280.0,\r",
+							"    \"qa_salary_after_12_months\": 4320.0,\r",
+							"    \"qa_salary_after_3.5_years\": 6080.0,\r",
+							"    \"qa_salary_after_6_months\": 3200,\r",
+							"    \"start_qa_salary\": 1600\r",
+							"});\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "",
+						"value": "",
+						"type": "text"
+					},
+					{
+						"key": "",
+						"value": "",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "{{name}}",
+							"type": "text"
+						},
+						{
+							"key": "age",
+							"value": "{{age}}",
+							"type": "text"
+						},
+						{
+							"key": "salary",
+							"value": "999",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{host}}object_info_2?name={{name_2}}&age={{age_2}}&salary={{salary_3}}",
+					"host": [
+						"{{host}}object_info_2"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "{{name_2}}"
+						},
+						{
+							"key": "age",
+							"value": "{{age_2}}"
+						},
+						{
+							"key": "salary",
+							"value": "{{salary_3}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "user_info_2",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Body is correct\", function () {\r",
+							"    pm.response.to.have.jsonBody({\r",
+							"    \"person\": {\r",
+							"        \"u_age\": 26,\r",
+							"        \"u_name\": [\r",
+							"            \"Mary\",\r",
+							"            1600,\r",
+							"            26\r",
+							"        ],\r",
+							"        \"u_salary_5_years\": 6720.0\r",
+							"    },\r",
+							"    \"qa_salary_after_1.5_year\": 5280.0,\r",
+							"    \"qa_salary_after_12_months\": 4320.0,\r",
+							"    \"qa_salary_after_3.5_years\": 6080.0,\r",
+							"    \"qa_salary_after_6_months\": 3200,\r",
+							"    \"start_qa_salary\": 1600\r",
+							"});\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "age",
+							"value": "{{age_2}}",
+							"type": "text"
+						},
+						{
+							"key": "name",
+							"value": "{{name_2}}",
+							"type": "text"
+						},
+						{
+							"key": "salary",
+							"value": "{{salary_4}}",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{host}}user_info_2",
+					"host": [
+						"{{host}}user_info_2"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					"pm.test(\"Status code is 200\", function () {",
+					"    pm.response.to.have.status(200);",
+					"});"
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "host",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"key": "age",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"key": "name",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"key": "salary",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"key": "weight",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"key": "name_1",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"key": "age_1",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"key": "salary_1",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"key": "name_2",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"key": "age_2",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"key": "salary_2",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"key": "salary_3",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"key": "salary_4",
+			"value": "",
+			"type": "string"
+		}
+	]
+}
