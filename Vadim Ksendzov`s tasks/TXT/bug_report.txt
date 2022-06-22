@@ -1,6 +1,21 @@
-title: заголовок
-en: окружение
-str: шаги воспроизведения
-ar: фактический результат
-er: ожидаемый результат
-at: вложения
+bug_id: 42
+
+title: The APP has no Actions menu
+
+severity: blocker
+
+priority: high
+
+environment: Samsung Galaxy s10, one UI 4.1, Android 12
+
+precondition: Installed app on the device
+
+steps_to_reproduce: 1. Open the APP, 2. Attention on the right corner
+
+actual_result: The APP has no Actions menu
+
+expected_result: The APP has an Actions menu
+
+attachments: https://disk.yandex.com/i/mRvidJESLD9I-A
+
+
