@@ -1,6 +1,7 @@
 {
-    'first name' : 'Andrew Shabailov'
-    'age':'29'
-    'count of pet':'1'
-    'future salary':'7000'
+    'first name' : 'Andrew',
+    'last_name: 'Shabailov',
+    'age': 29,
+    'count_of_pet':1,
+    'future_salary':7000
 }
