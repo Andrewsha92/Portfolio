@@ -1,5 +1,5 @@
 {
-    'testing' : ['functional', 'non fuctional','ad-hoc','automation','regression','integration'],
+    'testing' : ['functional', 'non fuctional','ad-hoc','automation','regression','integration', 'acceptance'],
     'tools':['bash','sql','git','bag-tracking systems','postman'],
     'automation':['js','python'],
     'soft_skills':['communicative','friendly','hard-working','attentive','proactive','interested']  
