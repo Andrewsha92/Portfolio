@@ -1,8 +1,8 @@
-1. Любимый фильм: ххх
-2. Любимый сериал: чернобыль
-3. Любимая еда: картофель
-4. Любимое время года: лето
-5. Страна которую хотел бы посетить: Португалия
+1. Favourite film: ххх
+2. Favourite TV series: Chernobyl
+3. Favourite food: potatoes
+4. Favourite time of the year: summer
+5. Country which I would like to visit: Portugal
 
 
 
