@@ -1,4 +1,4 @@
-тестирование : фунциональное, интеграционно, исследовательское, автоматизированное, регрессионое, нефунциональное.
-инструменты: bash, sql, git, bag-tacking systems, postman.
-автоматизация:jawa, python.
-софт-скилы: общительность, доброжелательность, усидчивость, внимательность, целеустремленность, увлеченность. 
+testing: functional, non fuctional, ad-hoc, automation, regression,integration, acceptance
+tools: bash, sql, git, bag-tracking systems, postman
+automation: js, python
+soft_skills: communicative, friendly, hard-working, attentive, proactive, interested 
