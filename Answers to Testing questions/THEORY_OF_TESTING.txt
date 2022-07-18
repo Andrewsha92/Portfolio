@@ -206,6 +206,9 @@
 33. Жизненный цикл бага (SDLC - Software Development Life Cycle)
 	Bug is created (баг создан) -> Bug is assigned (баг назначен) -> Bug is prioritized (баг приоритезирован) -> Bug is fixed (баг исправлен) -> Bug is retested (баг протестирован снова) -> Bug is closed (баг закрыт)
         если на ретесте баг снова воспроизводится возвращаемся к Bug is assigned.
+
+34. Severity vs Priority
+	Серьёзность(severity) - показывает степень ущерба для проекта, который наносится существованием деффекта. Severity выставляется тестировщиком.
 	
 
 
