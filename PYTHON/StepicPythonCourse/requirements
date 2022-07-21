@@ -1,0 +1,11 @@
+pytest
+selenium
+urllib3
+
+
+
+
+# Для внесения в политику конфиденциальности разрешений
+# Зайти в командную строку Windows PowerShell -  Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
+# Выбрать - Y
+# Запуск виртуального окружения в терминале - venv\Scripts\activate
