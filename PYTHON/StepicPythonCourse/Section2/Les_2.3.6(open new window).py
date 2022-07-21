@@ -2,7 +2,6 @@ import math
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 
-
 try:
     browser = webdriver.Chrome()
     link = "http://suninjuly.github.io/redirect_accept.html"
@@ -15,6 +14,7 @@ try:
 
     new_window = browser.window_handles[1]
     browser.switch_to.window(new_window)
+
 
     def calc(x):
         return str(math.log(abs(12 * math.sin(int(x)))))
@@ -30,6 +30,7 @@ try:
     alert = browser.switch_to.alert
     alert_text = alert.text
     print(alert_text)
+
 
 
 finally:
