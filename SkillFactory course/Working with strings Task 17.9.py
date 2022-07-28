@@ -6,13 +6,14 @@ print("# 1. Преобразуем в строку")
 
 L = a.split(" ")
 
-l = list(map(int,L))
+l = list(map(int, L))
 
 S = sorted(l)
 
-print("Преобразованная строка :" , S)
+print("Преобразованная строка :", S)
 
 print("***")
+
 
 def binary_search(array, element, left, right):
     if left > right:  # если левая граница превысила правую,
@@ -33,9 +34,3 @@ array = [i for i in range(1, 100)]  # 1,2,3,4,...
 
 # запускаем алгоритм на левой и правой границе
 print(binary_search(array, element, 0, 99))
-
-
-
-
-
-
