@@ -13,11 +13,9 @@ class LoginPageLocators():
 class ProductPageLocators():
     ADD_TO_BASKET = (By.CSS_SELECTOR,
                      "button.btn.btn-lg.btn-primary.btn-add-to-basket")
-    ORDERED_BOOK = (By.XPATH,
-                    "//div[2]/h1")
+    ORDERED_BOOK = (By.XPATH, "//article/div[1]/div[2]/h1")
     THE_BOOK_IN_BASKET = (By.CSS_SELECTOR, "#messages > div:nth-child(1) > div > strong")
     PRICE_OF_BOOK = (By.XPATH,
                      "//article/div[1]/div[2]/p[1]")
 
-    PRICE_OF_BASKET = (By.XPATH,
-                     "//div[3]/div/p[1]/strong")
+    PRICE_OF_BASKET = (By.XPATH, "//div[3]/div/p[1]/strong")
