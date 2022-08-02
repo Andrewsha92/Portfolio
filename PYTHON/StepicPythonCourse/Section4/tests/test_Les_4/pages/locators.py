@@ -19,3 +19,4 @@ class ProductPageLocators():
                      "//article/div[1]/div[2]/p[1]")
 
     PRICE_OF_BASKET = (By.XPATH, "//div[3]/div/p[1]/strong")
+    SUCCESS_MESSAGE = (By.XPATH, "//*[@id='messages']/div[1]/div")
