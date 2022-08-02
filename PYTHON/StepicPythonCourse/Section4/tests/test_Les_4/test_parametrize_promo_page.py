@@ -1,14 +1,11 @@
 import pytest
 from .pages.promo_page import PromoPage
 
-product_base_link = "http://selenium1py.pythonanywhere.com/catalogue/coders-at-work_207"
 
-url = [f"{product_base_link}?promo=offer{no}" if no != "???"
-       else pytest.param("bugged_link", marks=pytest.mark.xfail) for no in range(10)]
-
-
-@pytest.mark.parametrize('link', url)
-def test_guest_can_add_product_to_basket(browser, link):
+@pytest.mark.parametrize('promo_offer',
+                         [pytest.param(i, marks=pytest.mark.xfail(i == 7, reason='Failed test')) for i in range(10)])
+def test_guest_can_add_product_to_basket(browser, promo_offer):
+    link = f"http://selenium1py.pythonanywhere.com/catalogue/coders-at-work_207/?promo=offer{promo_offer}"
     page = PromoPage(browser, link)  # инициализируем Page Object, передаем в конструктор экземпляр драйвера и url адрес
     page.open()  # открываем страницу
     page.button_add_click()
