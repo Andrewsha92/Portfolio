@@ -1,4 +1,4 @@
-from selenium.common.exceptions import NoAlertPresentException, TimeoutException  # в начале файла
+from selenium.common.exceptions import NoAlertPresentException, TimeoutException
 from selenium.common.exceptions import NoSuchElementException
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
@@ -25,6 +25,10 @@ class BasePage:
 
     def should_be_login_link(self):
         assert self.is_element_present(*BasePageLocators.LOGIN_LINK), "Login link is not presented"
+
+    def should_be_authorized_user(self):
+        assert self.is_element_present(*BasePageLocators.USER_ICON), "User icon is not presented," \
+                                                                     " probably unauthorised user"
 
     def is_element_present(self, how, what):
         try:
