@@ -25,6 +25,7 @@ class BasePageLocators:
 
 class LoginPageLocators:
     LOGIN_FORM = (By.CSS_SELECTOR, "#login_form")
+    LOGIN_LINK = (By.CSS_SELECTOR, "#login_link")
     REGISTER_FORM = (By.CSS_SELECTOR, "#register_form")
     REGISTER_EMAIL = (By.CSS_SELECTOR, "#id_registration-email")
     REGISTER_PASSWORD = (By.CSS_SELECTOR, "#id_registration-password1")
@@ -33,6 +34,9 @@ class LoginPageLocators:
 
 
 class ProductPageLocators:
+    LOGIN_FORM = (By.CSS_SELECTOR, "#login_form")
+    LOGIN_LINK = (By.CSS_SELECTOR, "#login_link")
+    LOGOUT_LINK = (By.CSS_SELECTOR, "#logout_link")
     ADD_TO_BASKET = (By.CSS_SELECTOR,
                      "button.btn.btn-lg.btn-primary.btn-add-to-basket")
     ORDERED_BOOK = (By.XPATH, "//article/div[1]/div[2]/h1")
