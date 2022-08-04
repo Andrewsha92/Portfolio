@@ -5,7 +5,7 @@ from .locators import ProductPageLocators
 class ProductPage(BasePage):
 
     def should_be_login_link(self):
-        assert self.is_element_present(*ProductPageLocators.LOGIN_LINK), "Login link is not present"
+        assert self.is_element_present(*ProductPageLocators.LOGIN_LINK), "Login link is not presented"
 
     def click_logout_link(self):
         self.browser.find_element(*ProductPageLocators.LOGOUT_LINK).click()
@@ -20,11 +20,11 @@ class ProductPage(BasePage):
 
     def guest_can_add_product_to_basket(self):
         assert self.is_element_present(*ProductPageLocators.ADD_TO_BASKET), \
-            "Button 'add to bag' is not present"
+            "Button 'add to bag' is not presented"
 
     def should_not_be_success_message_is_not_present(self):
         assert not self.is_element_present(*ProductPageLocators.SUCCESS_MESSAGE), \
-            "Success message is present"
+            "Success message is presented"
 
     def checking_name_ordered_book_and_book_in_basket(self):
         ordered_book = self.browser.find_element(*ProductPageLocators.ORDERED_BOOK).text
