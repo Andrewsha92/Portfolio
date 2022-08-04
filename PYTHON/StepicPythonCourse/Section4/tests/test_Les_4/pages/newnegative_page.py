@@ -12,7 +12,7 @@ class NewPage(BasePage):
         assert self.is_element_present(*ProductPageLocators.ADD_TO_BASKET), \
             "Button 'add to bag' is not presented"
 
-    def should_not_be_success_message_is_not_pres(self):
+    def should_not_be_success_message_is_not_present(self):
         assert not self.is_element_present(*ProductPageLocators.SUCCESS_MESSAGE), \
             "Success message is presented"
 
