@@ -149,7 +149,7 @@ class TestTitleFromBasePage:
         page.guest_can_go_to_kids_toys_link()
 
 
-class TestBodyBannersBasePage:
+class TestBodyBannersFromBasePage:
     def test_guest_can_see_ozon_banner(self, browser):
         page = BasePage(browser, link)
         page.open()
@@ -226,3 +226,153 @@ class TestFooterBasePage:
         page = BasePage(browser, link)
         page.open()
         page.guest_can_go_to_referral_footer_link()
+
+    def test_guest_can_go_to_ozon_box_link(self, browser):
+        page = BasePage(browser, link)
+        page.open()
+        page.guest_can_go_to_ozon_box_link()
+
+    def test_guest_can_go_to_open_on_ozon_point_link(self, browser):
+        page = BasePage(browser, link)
+        page.open()
+        page.guest_can_go_to_open_on_ozon_point_link()
+
+    def test_guest_can_go_to_become_deliver_link(self, browser):
+        page = BasePage(browser, link)
+        page.open()
+        page.guest_can_go_to_become_deliver_link()
+
+    def test_guest_can_go_to_what_sell_link(self, browser):
+        page = BasePage(browser, link)
+        page.open()
+        page.guest_can_go_to_what_sell_link()
+
+    def test_guest_can_go_to_selling_on_ozon_link(self, browser):
+        page = BasePage(browser, link)
+        page.open()
+        page.guest_can_go_to_selling_on_ozon_link()
+
+    def test_guest_can_go_to_about_ozon_link(self, browser):
+        page = BasePage(browser, link)
+        page.open()
+        page.guest_can_go_to_about_ozon_link()
+
+    def test_guest_can_go_to_become_courier_link(self, browser):
+        page = BasePage(browser, link)
+        page.open()
+        page.guest_can_go_to_become_courier_link()
+
+    def test_guest_can_go_to_press_contacts_link(self, browser):
+        page = BasePage(browser, link)
+        page.open()
+        page.guest_can_go_to_press_contracts_link()
+
+    def test_guest_can_go_to_requisites_link(self, browser):
+        page = BasePage(browser, link)
+        page.open()
+        page.guest_can_go_to_requisites_link()
+
+    def test_guest_can_go_to_ozon_ballon_link(self, browser):
+        page = BasePage(browser, link)
+        page.open()
+        page.guest_can_go_to_ozon_ballon_link()
+
+    def test_guest_can_go_to_ozon_brand_link(self, browser):
+        page = BasePage(browser, link)
+        page.open()
+        page.guest_can_go_to_ozon_brand_link()
+
+    def test_guest_can_go_to_hot_line_link(self, browser):
+        page = BasePage(browser, link)
+        page.open()
+        page.guest_can_go_to_hot_line_link()
+
+    def test_guest_can_go_to_stable_development_link(self, browser):
+        page = BasePage(browser, link)
+        page.open()
+        page.guest_can_go_to_stable_development_link()
+
+    def test_guest_can_go_to_ozon_care_link(self, browser):
+        page = BasePage(browser, link)
+        page.open()
+        page.guest_can_go_to_ozon_care_link()
+
+    def test_guest_can_go_to_personal_data_link(self, browser):
+        page = BasePage(browser, link)
+        page.open()
+        page.guest_can_go_to_personal_data_link()
+
+    def test_guest_can_go_to_how_order_link(self, browser):
+        page = BasePage(browser, link)
+        page.open()
+        page.guest_can_go_to_how_order_link()
+
+    def test_guest_can_go_to_delivery_link(self, browser):
+        page = BasePage(browser, link)
+        page.open()
+        page.guest_can_go_to_delivery_link()
+
+    def test_guest_can_go_to_payment_link(self, browser):
+        page = BasePage(browser, link)
+        page.open()
+        page.guest_can_go_to_payment_link()
+
+    def test_guest_can_go_to_contacts_link(self, browser):
+        page = BasePage(browser, link)
+        page.open()
+        page.guest_can_go_to_contacts_link()
+
+    def test_guest_can_go_to_safety_link(self, browser):
+        page = BasePage(browser, link)
+        page.open()
+        page.guest_can_go_to_safety_link()
+
+    def test_guest_can_go_to_all_rights_link(self, browser):
+        page = BasePage(browser, link)
+        page.open()
+        page.guest_can_go_to_all_rights_link()
+
+    def test_guest_can_go_to_vk_link(self, browser):
+        page = BasePage(browser, link)
+        page.open()
+        page.guest_can_go_to_vk_link()
+
+    def test_guest_can_go_to_ok_link(self, browser):
+        page = BasePage(browser, link)
+        page.open()
+        page.guest_can_go_to_ok_link()
+
+    def test_guest_can_go_to_tg_link(self, browser):
+        page = BasePage(browser, link)
+        page.open()
+        page.guest_can_go_to_tg_link()
+
+    def test_guest_can_go_to_better_vision_link(self, browser):
+        page = BasePage(browser, link)
+        page.open()
+        page.guest_can_go_to_better_vision_link()
+
+    def test_guest_can_go_to_stop_covid_link(self, browser):
+        page = BasePage(browser, link)
+        page.open()
+        page.guest_can_go_to_stop_covid_link()
+
+    def test_guest_can_go_to_ozon_link(self, browser):
+        page = BasePage(browser, link)
+        page.open()
+        page.guest_can_go_to_ozon_link()
+
+    def test_guest_can_go_to_ozon_vacancies_link(self, browser):
+        page = BasePage(browser, link)
+        page.open()
+        page.guest_can_go_to_ozon_vacancies_link()
+
+    def test_guest_can_go_to_route_256_link(self, browser):
+        page = BasePage(browser, link)
+        page.open()
+        page.guest_can_go_to_route_256_link()
+
+    def test_guest_can_go_to_litres_ru_link(self, browser):
+        page = BasePage(browser, link)
+        page.open()
+        page.guest_can_go_to_litres_ru_link()
