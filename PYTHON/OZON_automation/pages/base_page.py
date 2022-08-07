@@ -234,6 +234,186 @@ class BasePage:
         assert self.is_element_present(
             *BasePageFooterLocators.REFERRAL_PROGRAM_LINK), "Referral program link in footer is not presented"
 
+    def guest_can_go_to_ozon_box_link(self):
+        self.browser.execute_script("window.scrollBy(0,1000)", "")
+        self.browser.find_element(*BasePageFooterLocators.SET_OZON_BOX_LINK)
+        assert self.is_element_present(
+            *BasePageFooterLocators.SET_OZON_BOX_LINK), "Ozon box link in footer is not presented"
+
+    def guest_can_go_to_open_on_ozon_point_link(self):
+        self.browser.execute_script("window.scrollBy(0,1000)", "")
+        self.browser.find_element(*BasePageFooterLocators.OPEN_ON_OZON_POINT_LINK)
+        assert self.is_element_present(
+            *BasePageFooterLocators.OPEN_ON_OZON_POINT_LINK), "Open on Ozon point link in footer is not presented"
+
+    def guest_can_go_to_become_deliver_link(self):
+        self.browser.execute_script("window.scrollBy(0,1000)", "")
+        self.browser.find_element(*BasePageFooterLocators.BECOME_DELIVER_LINK)
+        assert self.is_element_present(
+            *BasePageFooterLocators.BECOME_DELIVER_LINK), "Become deliver link in footer is not presented"
+
+    def guest_can_go_to_what_sell_link(self):
+        self.browser.execute_script("window.scrollBy(0,1000)", "")
+        self.browser.find_element(*BasePageFooterLocators.WHAT_SELL_LINK)
+        assert self.is_element_present(
+            *BasePageFooterLocators.WHAT_SELL_LINK), "What sell link in footer is not presented"
+
+    def guest_can_go_to_selling_on_ozon_link(self):
+        self.browser.execute_script("window.scrollBy(0,1000)", "")
+        self.browser.find_element(*BasePageFooterLocators.SELLING_ON_OZON_LINK)
+        assert self.is_element_present(
+            *BasePageFooterLocators.SELLING_ON_OZON_LINK), "Selling on Ozon link in footer is not presented"
+
+    def guest_can_go_to_about_ozon_link(self):
+        self.browser.execute_script("window.scrollBy(0,1000)", "")
+        self.browser.find_element(*BasePageFooterLocators.ABOUT_OZON_LINK)
+        assert self.is_element_present(
+            *BasePageFooterLocators.ABOUT_OZON_LINK), "About Ozon link in footer is not presented"
+
+    def guest_can_go_to_become_courier_link(self):
+        self.browser.execute_script("window.scrollBy(0,1000)", "")
+        self.browser.find_element(*BasePageFooterLocators.BECOME_COURIER_LINK)
+        assert self.is_element_present(
+            *BasePageFooterLocators.BECOME_COURIER_LINK), "Become courier link in footer is not presented"
+
+    def guest_can_go_to_press_contracts_link(self):
+        self.browser.execute_script("window.scrollBy(0,1000)", "")
+        self.browser.find_element(*BasePageFooterLocators.PRESS_CONTACTS_LINK)
+        assert self.is_element_present(
+            *BasePageFooterLocators.PRESS_CONTACTS_LINK), "Press contracts link in footer is not presented"
+
+    def guest_can_go_to_requisites_link(self):
+        self.browser.execute_script("window.scrollBy(0,1000)", "")
+        self.browser.find_element(*BasePageFooterLocators.REQUISITES_LINK)
+        assert self.is_element_present(
+            *BasePageFooterLocators.REQUISITES_LINK), "Requisites link in footer is not presented"
+
+    def guest_can_go_to_ozon_ballon_link(self):
+        self.browser.execute_script("window.scrollBy(0,1000)", "")
+        self.browser.find_element(*BasePageFooterLocators.OZON_BALLON_LINK)
+        assert self.is_element_present(
+            *BasePageFooterLocators.OZON_BALLON_LINK), "Ozon ballon link in footer is not presented"
+
+    def guest_can_go_to_ozon_brand_link(self):
+        self.browser.execute_script("window.scrollBy(0,1000)", "")
+        self.browser.find_element(*BasePageFooterLocators.OZON_BRAND_LINK)
+        assert self.is_element_present(
+            *BasePageFooterLocators.OZON_BRAND_LINK), "Ozon brand link in footer is not presented"
+
+    def guest_can_go_to_hot_line_link(self):
+        self.browser.execute_script("window.scrollBy(0,1000)", "")
+        self.browser.find_element(*BasePageFooterLocators.HOT_LINE_LINK)
+        assert self.is_element_present(
+            *BasePageFooterLocators.HOT_LINE_LINK), "Hot line link in footer is not presented"
+
+    def guest_can_go_to_stable_development_link(self):
+        self.browser.execute_script("window.scrollBy(0,1000)", "")
+        self.browser.find_element(*BasePageFooterLocators.STABLE_DEVELOPMENT_LINK)
+        assert self.is_element_present(
+            *BasePageFooterLocators.STABLE_DEVELOPMENT_LINK), "Stable development link in footer is not presented"
+
+    def guest_can_go_to_ozon_care_link(self):
+        self.browser.execute_script("window.scrollBy(0,1000)", "")
+        self.browser.find_element(*BasePageFooterLocators.OZON_CARE_LINK)
+        assert self.is_element_present(
+            *BasePageFooterLocators.OZON_CARE_LINK), "Ozon care link in footer is not presented"
+
+    def guest_can_go_to_personal_data_link(self):
+        self.browser.execute_script("window.scrollBy(0,1000)", "")
+        self.browser.find_element(*BasePageFooterLocators.PERSONAL_DATA_LINK)
+        assert self.is_element_present(
+            *BasePageFooterLocators.PERSONAL_DATA_LINK), "Personal data link in footer is not presented"
+
+    def guest_can_go_to_how_order_link(self):
+        self.browser.execute_script("window.scrollBy(0,1000)", "")
+        self.browser.find_element(*BasePageFooterLocators.HOW_ORDER_LINK)
+        assert self.is_element_present(
+            *BasePageFooterLocators.HOW_ORDER_LINK), "How order link in footer is not presented"
+
+    def guest_can_go_to_delivery_link(self):
+        self.browser.execute_script("window.scrollBy(0,1000)", "")
+        self.browser.find_element(*BasePageFooterLocators.DELIVERY_LINK)
+        assert self.is_element_present(
+            *BasePageFooterLocators.DELIVERY_LINK), "Delivery link in footer is not presented"
+
+    def guest_can_go_to_payment_link(self):
+        self.browser.execute_script("window.scrollBy(0,1000)", "")
+        self.browser.find_element(*BasePageFooterLocators.PAYMENT_LINK)
+        assert self.is_element_present(
+            *BasePageFooterLocators.PAYMENT_LINK), "Payment link in footer is not presented"
+
+    def guest_can_go_to_contacts_link(self):
+        self.browser.execute_script("window.scrollBy(0,1000)", "")
+        self.browser.find_element(*BasePageFooterLocators.CONTACTS_LINK)
+        assert self.is_element_present(
+            *BasePageFooterLocators.CONTACTS_LINK), "Contacts link in footer is not presented"
+
+    def guest_can_go_to_safety_link(self):
+        self.browser.execute_script("window.scrollBy(0,1000)", "")
+        self.browser.find_element(*BasePageFooterLocators.SAFETY_LINK)
+        assert self.is_element_present(
+            *BasePageFooterLocators.SAFETY_LINK), "Safety link in footer is not presented"
+
+    def guest_can_go_to_all_rights_link(self):
+        self.browser.execute_script("window.scrollBy(0,1000)", "")
+        self.browser.find_element(*BasePageFooterLocators.ALL_RIGHTS_LINK)
+        assert self.is_element_present(
+            *BasePageFooterLocators.ALL_RIGHTS_LINK), "All rights link in footer is not presented"
+
+    def guest_can_go_to_vk_link(self):
+        self.browser.execute_script("window.scrollBy(0,1000)", "")
+        self.browser.find_element(*BasePageFooterLocators.VK_LINK)
+        assert self.is_element_present(
+            *BasePageFooterLocators.VK_LINK), "VK link in footer is not presented"
+
+    def guest_can_go_to_ok_link(self):
+        self.browser.execute_script("window.scrollBy(0,1000)", "")
+        self.browser.find_element(*BasePageFooterLocators.OK_LINK)
+        assert self.is_element_present(
+            *BasePageFooterLocators.OK_LINK), "OK link in footer is not presented"
+
+    def guest_can_go_to_tg_link(self):
+        self.browser.execute_script("window.scrollBy(0,1000)", "")
+        self.browser.find_element(*BasePageFooterLocators.TG_LINK)
+        assert self.is_element_present(
+            *BasePageFooterLocators.TG_LINK), "TG link in footer is not presented"
+
+    def guest_can_go_to_better_vision_link(self):
+        self.browser.execute_script("window.scrollBy(0,1000)", "")
+        self.browser.find_element(*BasePageFooterLocators.BETTER_VISION)
+        assert self.is_element_present(
+            *BasePageFooterLocators.BETTER_VISION), "Better vision link in footer is not presented"
+
+    def guest_can_go_to_stop_covid_link(self):
+        self.browser.execute_script("window.scrollBy(0,1000)", "")
+        self.browser.find_element(*BasePageFooterLocators.STOP_COVID_LINK)
+        assert self.is_element_present(
+            *BasePageFooterLocators.STOP_COVID_LINK), "Stop covid link in footer is not presented"
+
+    def guest_can_go_to_ozon_link(self):
+        self.browser.execute_script("window.scrollBy(0,1000)", "")
+        self.browser.find_element(*BasePageFooterLocators.OZON_LINK)
+        assert self.is_element_present(
+            *BasePageFooterLocators.OZON_LINK), "Ozon link in footer is not presented"
+
+    def guest_can_go_to_ozon_vacancies_link(self):
+        self.browser.execute_script("window.scrollBy(0,1000)", "")
+        self.browser.find_element(*BasePageFooterLocators.OZON_VACANCIES_LINK)
+        assert self.is_element_present(
+            *BasePageFooterLocators.OZON_VACANCIES_LINK), "Ozon vacancies link in footer is not presented"
+
+    def guest_can_go_to_route_256_link(self):
+        self.browser.execute_script("window.scrollBy(0,1000)", "")
+        self.browser.find_element(*BasePageFooterLocators.ROUTE_256_LINK)
+        assert self.is_element_present(
+            *BasePageFooterLocators.ROUTE_256_LINK), "Route 256 link in footer is not presented"
+
+    def guest_can_go_to_litres_ru_link(self):
+        self.browser.execute_script("window.scrollBy(0,1000)", "")
+        self.browser.find_element(*BasePageFooterLocators.LITRES_RU_LINK)
+        assert self.is_element_present(
+            *BasePageFooterLocators.LITRES_RU_LINK), "Litres.ru link in footer is not presented"
+
     def is_element_present(self, how, what):
         try:
             self.browser.find_element(how, what)
