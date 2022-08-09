@@ -13,7 +13,7 @@ class BasePageHeaderLocators:
     CERTIFICATES_LINK = (By.CSS_SELECTOR, "li:nth-child(4) > div > a > span")
     HELP_LINK = (By.CSS_SELECTOR, "li:nth-child(5) > div > a > span")
     POINTS_OF_ISSUE_LINK = (
-    By.CSS_SELECTOR, "#layoutPage > div.b4 > div.g1d > div > ul > li:nth-child(7) > div > a > span")
+        By.CSS_SELECTOR, "#layoutPage > div.b4 > div.g1d > div > ul > li:nth-child(7) > div > a > span")
     OZON_ICON = (By.CSS_SELECTOR, "#stickyHeader > div.w0c > a > img")
     CATALOGUE_BUTTON = (By.CSS_SELECTOR, " div.q7c > div > div.ui-b0 > button > span")
     EVERYWHERE_DROPDOWN = (By.CSS_SELECTOR, "span.aia")

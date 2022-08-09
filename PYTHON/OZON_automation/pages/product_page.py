@@ -39,4 +39,3 @@ class TestProductPage(BasePage):
         self.browser.implicitly_wait(3)
         basket_price = self.browser.find_element(*ProductPageLocators.BASKET_PRICE).text
         assert order_price == basket_price, f'{order_price} not equal {basket_price}'
-
