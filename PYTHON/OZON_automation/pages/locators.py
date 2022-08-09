@@ -102,3 +102,9 @@ class ProductPageLocators:
     ORDER_PRICE = (By.CSS_SELECTOR, "div.xk8.x9k span.x8k")
     BASKET_PRICE = (By.CSS_SELECTOR, "div:nth-child(6) div span span")
     POP_UP = (By.CSS_SELECTOR, "div.m2c button > span svg")
+
+
+class ParametrizePageLocators:
+    SEARCH_STRING = (By.CSS_SELECTOR, "div.ai2a > input:nth-child(1)")
+    SEARCH_BUTTON = (By.CSS_SELECTOR, "#stickyHeader > div.qc9 > div > form > button")
+    SUCCESS_MESSAGE = (By.CSS_SELECTOR, "div:nth-child(2) > div.aia > div:nth-child(2) > div.aa0i")
