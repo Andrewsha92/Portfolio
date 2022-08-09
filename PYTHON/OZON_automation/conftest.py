@@ -1,6 +1,7 @@
 import pytest
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
+from fake_useragent import UserAgent
 
 """
     Встроенная фикстура request может получать данные о текущем запущенном тесте, что позволяет, например,
@@ -30,10 +31,22 @@ def browser(request):
     browser = None
     if browser_name == "chrome":
         print(f"\nuser language: {user_language}\nstart {browser_name} browser for test..")
+        useragent = UserAgent()
         options = Options()
+        options.add_argument(f'user-agent={useragent.random}')
         options.add_argument("--window-size=1500,800")
+        options.add_argument("--disable-blink-features")
+        options.add_experimental_option("excludeSwitches", ["enable-automation"])
         options.add_experimental_option('prefs', {'intl.accept_languages': user_language})
+
         browser = webdriver.Chrome(options=options)
+        browser.execute_cdp_cmd("Page.addScriptToEvaluateOnNewDocument", {
+     "source": """
+          const newProto = navigator.__proto__
+          delete newProto.webdriver
+          navigator.__proto__ = newProto
+          """
+    })
     elif browser_name == "firefox":
         print(f"\nuser language: {user_language}\nstart {browser_name} browser for test..")
         fp = webdriver.FirefoxProfile()

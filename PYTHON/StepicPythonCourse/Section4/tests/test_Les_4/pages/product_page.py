@@ -13,7 +13,6 @@ class ProductPage(BasePage):
     def should_be_button_on_the_page(self):
         self.guest_can_add_product_to_basket()
 
-
     def button_add_click(self):
         button_add = self.browser.find_element(*ProductPageLocators.ADD_TO_BASKET)
         button_add.click()

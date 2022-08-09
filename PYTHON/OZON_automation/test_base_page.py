@@ -5,8 +5,8 @@ from .pages.base_page import BasePage
 link = "https://ozon.ru/"
 
 
-@pytest.mark.title
-class TestTitleFromBasePage:
+@pytest.mark.header
+class TestHeaderFromBasePage:
     def test_guest_can_change_currency(self, browser):
         page = BasePage(browser, link)
         page.open()
@@ -149,6 +149,7 @@ class TestTitleFromBasePage:
         page.guest_can_go_to_kids_toys_link()
 
 
+@pytest.mark.body
 class TestBodyBannersFromBasePage:
     def test_guest_can_see_ozon_banner(self, browser):
         page = BasePage(browser, link)
@@ -211,7 +212,9 @@ class TestBodyBannersFromBasePage:
         page.guest_can_see_save_vitamins_banner()
 
 
+@pytest.mark.footer
 class TestFooterBasePage:
+
     def test_guest_can_go_to_your_goods_link(self, browser):
         page = BasePage(browser, link)
         page.open()
