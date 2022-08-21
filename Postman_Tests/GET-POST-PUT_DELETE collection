@@ -1,0 +1,328 @@
+{
+	"info": {
+		"_postman_id": "d8ff2b1e-e59d-4b3a-979a-dd32b38b288a",
+		"name": "Test PetFriends Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "19359539"
+	},
+	"item": [
+		{
+			"name": "API key",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "email",
+						"value": "TestAndrew@tut.ya",
+						"type": "text"
+					},
+					{
+						"key": "password",
+						"value": "1234",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{base_url}}/api/key",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"key"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						},
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "NewPet",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"let jsonData = pm.response.json();\r",
+							"\r",
+							"pm.test(\"String age\", function () {\r",
+							"    pm.expect(jsonData.age).to.eql(\"28\");\r",
+							"});\r",
+							"\r",
+							"pm.test(\"String animal_type\", function () {\r",
+							"    pm.expect(jsonData.animal_type).to.eql(\"Elephant\");\r",
+							"});\r",
+							"\r",
+							"pm.test(\"String name\", function () {\r",
+							"    pm.expect(jsonData.name).to.eql(\"Medved\");\r",
+							"});\r",
+							"\r",
+							"pm.test(\"All the tests have status OK and have JSON format\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"    pm.response.to.be.ok;\r",
+							"    pm.response.to.be.json;\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Response includes specified elements\", function () {\r",
+							"    pm.expect(jsonData.name).to.eql(\"Medved\");\r",
+							"    pm.expect(jsonData.animal_type).to.eql(\"Elephant\");\r",
+							"    pm.expect(jsonData.age).to.eql(\"28\")\r",
+							"});\r",
+							"\r",
+							"new_response = pm.response.json();\r",
+							"id = new_response.id\r",
+							"pet_id = pm.globals.set(\"pet_id\", id)\r",
+							"new_age = pm.globals.set(\"new_age\", 33);\r",
+							"new_animal_type = pm.globals.set(\"new_animal_type\", \"Bunny\");\r",
+							"new_name = pm.globals.set(\"new_name\", \"Simon\");\r",
+							"\r",
+							"\r",
+							"\r",
+							"\r",
+							"\r",
+							"\r",
+							"\r",
+							"\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"Medved\",\r\n    \"animal_type\":\"Elephant\",\r\n    \"age\":\"28\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/api/create_pet_simple",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"create_pet_simple"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PetUpdate",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"response = pm.response.json()\r",
+							"\r",
+							"pm.test(\"New name is correct\", function () {\r",
+							"    pm.expect(response.name).to.eql(\"Simon\");\r",
+							"});\r",
+							"\r",
+							"pm.test(\"New animal type is correct\", function () {\r",
+							"    pm.expect(response.animal_type).to.eql(\"Bunny\");\r",
+							"});\r",
+							"\r",
+							"pm.test(\"New age is correct\", function () {\r",
+							"    pm.expect(response.age).to.eql(\"33\");\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "age",
+							"value": "{{new_age}}",
+							"type": "text"
+						},
+						{
+							"key": "name",
+							"value": "{{new_name}}",
+							"type": "text"
+						},
+						{
+							"key": "animal_type",
+							"value": "{{new_animal_type}}",
+							"type": "text"
+						},
+						{
+							"key": "pet_photo",
+							"type": "file",
+							"src": "/C:/Users/Andrew Shabailov/Pictures/bunny.jpg"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{base_url}}/api/pets/{{pet_id}}",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"pets",
+						"{{pet_id}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PetDelete",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "",
+							"value": "",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "",
+							"value": "",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "",
+							"value": "",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "",
+							"value": "",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "{{base_url}}/api/pets/{{pet_id}}",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"pets",
+						"{{pet_id}}"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "apikey",
+		"apikey": [
+			{
+				"key": "value",
+				"value": "430bd18b2f702f2837a8265c4c1fad977658927837a1624d6adb53bc",
+				"type": "string"
+			},
+			{
+				"key": "key",
+				"value": "auth_key",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "base_url",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"key": "age",
+			"value": ""
+		}
+	]
+}
